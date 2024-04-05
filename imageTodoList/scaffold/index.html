@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Image To Do List</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="carousel">
-        <div class="carousel-items">
-            <!-- Define you carousel here -->
-            
-        </div>
+      <div class="carousel-items">
+        <!-- Define you carousel here -->
+      </div>
     </div>
 
     <div class="app-container">
-
-        <!-- Define your rest of the things of the Image TODO List app here -->
-        
-        </div>
-
-        <div class="file-list" id="fileList">
-            <!-- Create the space here where your uploaded image will be visible -->
-        </div>
-        
-        
+      <!-- delete all the elements -->
+      <button id="deleteAll">delete all</button>
+      <!-- delete button -->
+      <button id="delete">delete</button>
+      <!-- Define your rest of the things of the Image TODO List app here -->
+      <input type="file" id="imageUpload" accept="image/*" name="imageFile" />
+      <div class="file-list" id="fileList">
+        <!-- Create the space here where your uploaded image will be visible -->
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

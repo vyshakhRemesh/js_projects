@@ -1,1 +1,9 @@
 /* Write your desired css here */
+.mediumImage {
+  height: 100px;
+  width: 100px;
+}
+.file-list {
+  display: flex;
+  flex-direction: column;
+}
