@@ -6,10 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const imageUpload = document.getElementById("imageUpload");
   const deleteButton = document.getElementById("delete");
   const deleteAllButton = document.getElementById("deleteAll");
+  const descriptionInput = document.getElementById("description");
 
   // Display stored images from local storage when the page loads
   let storedList = getStoredList() != null ? getStoredList() : [];
   displayFiles(storedList);
+
+  dropzone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+  dropzone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    console.log(e.dataTransfer.files);
+    const file = e.dataTransfer.files[0];
+    addNewFile(file);
+  });
 
   imageUpload.addEventListener("change", handleFileUpload);
 
@@ -21,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function addNewFile(file) {
     if (!file) return;
+    console.log(`the file type you added is ${typeof file}`);
     console.log("the file to add is ", file);
 
     //convert the blob file to base64
@@ -48,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("storedListArray", JSON.stringify(list));
   }
 
+  //function to display the images in storedList
   function displayFiles(list) {
     console.log("entered the display function", list);
     fileList.innerHTML = ""; // Clear existing images before displaying from local storage

@@ -17,10 +17,19 @@
     <div class="app-container">
       <!-- delete all the elements -->
       <button id="deleteAll">delete all</button>
+
       <!-- delete button -->
       <button id="delete">delete</button>
-      <!-- Define your rest of the things of the Image TODO List app here -->
-      <input type="file" id="imageUpload" accept="image/*" name="imageFile" />
+
+      <!-- drop zone -->
+      <div id="dropzone">
+        <label class="inputLabel" for="imageUpload"
+          >drop or click to select image</label
+        >
+        <input type="file" id="imageUpload" accept="image/*" name="imageFile" />
+      </div>
+      <input type="text" id="description" placeholder="enter the description" />
+
       <div class="file-list" id="fileList">
         <!-- Create the space here where your uploaded image will be visible -->
       </div>
